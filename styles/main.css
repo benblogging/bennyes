@@ -1,1 +1,160 @@
-
+  /*=======RESET========*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+    html{
+    scroll-behavior: smooth;
+    }
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+      a{text-decoration:none;}
+/* ============== clearfix ====================*/
+.cf:before,
+.cf:after {
+	content: &quot; &quot;; /* 1 */
+	display: table; /* 2 */
+}
+.cf:after {
+	clear: both;
+}
+/**
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+.cf {
+	*zoom: 1;
+}
+    /*=========colors============*/
+    :root{
+    	--nav-bg-h-color:#092040;
+    	--nav-text-n-hover-color:orange;
+    	--headings-clr:var(--nav-bg-h-color);
+    	--article-a:#00417d;
+    	--article-a-hover:#1f93ff;
+    	--body-bg:snow;
+    	--text-color:#000;
+    	--nav-font:'Miriam libre',sans-serif;
+    	--main-font:'BeVietnamRegular',sans-serif;
+      	--main-font-bold:'BeVietnamExtraBold',sans-serif;
+      --main-font-italic:'BeVietnamItalic',sans-serif;
+      --main-font-bold-italic:'BeVietnamExtraBoldItalic',sans-serif;
+    	--headings-font:'literata',serif;
+    	--sidebar-title-font:var(--main-font-bold);
+    	--monospace-font:'CodeNewRomanRegular',monospace;
+      --monospace-bold:'CodeNewRomanExtraBold',monospace;
+      --monospace-italic:'CodeNewRomanItalic',monospace;
+		--monospace-bold-italic:'CodeNewRomanExtraBoldItalic',monospace;
+    }
+      
+      #container{
+      display:flex;
+    position:relative;
+	width: 92%;
+	min-height: calc(100% - 100px - 50px);
+	margin-left: auto;
+    margin-right: auto;
+	box-sizing: border-box;
+}
+#invisibletag{display: none;}
+      .small-icon{width:12px;margin-right:5px;}
+      #article{
+      font-family:var(--main-font);
+      overflow: auto;
+	height: 100%;
+	text-align: left;
+	color: var(--text-color);
+	box-sizing: border-box;
+    margin: 0 auto;
+    position:relative;
+      line-height: 1.8;
+      }
+      #article i{font-family:var(--main-font-italic);}
+      #article b i, #article strong i{font-family:var(--main-font-bold-italic);}
+      #article b,#article strong{font-family: var(--main-font-bold);}
+      #article h1,h1,#article h1 b,h1 b,#article h1 i,h1 i,h1 i,#article h1 b i,#article h2,h2,#article h2 b,h2 b,#article h2 i,h2 i#article h2 b i,#article h3,h3,#article h3 b,h3 b,#article h3 i,h3 i,#article h3 b i,#article h4,h4,#article h4 b,h4 b,#article h4 i,h4 i,#article h4 b i,#article h5,h5,#article h5 b,h5 b,#article h5 i,h5 i,#article h5 b i,#article h6,h6,#article h6 b,h6 b,#article h6 i,h6 i,#article h6 b i{font-family:var(--headings-font);}
+      #article h1, #article h2, #article h3, #article h4, #article h5, #article h6{
+   	color: var(--headings-clr);
+    font-weight: 800;
+    line-height: 1.2;
+}
+      article h1.post-title a{color:var(--headings-clr);}
+#article h1,h1{font-size: 30px;}
+#article h2,h2{font-size: 28px;}
+#article h3,h3{font-size: 26px;}
+#article h4,h4{font-size: 24px;}
+#article h5,h5{font-size: 22px;}
+#article h6,h6{font-size: 20px;}
+#article .japanese{font-family:&quot;Noto Sans JP&quot;,&quot;Meiryo UI&quot;;}
+#article a{color: var(--article-a);}
+      .jumpto{
+  	margin-top:-300px;
+    padding-bottom:300px;
+    display:block;
+    position: absolute;
+z-index: -2;
+}
+      /* ============EU-COOKIES============== */
+#cookieChoiceInfo {
+    bottom: 9px;
+    top: unset;
+    left: 10px;
+    right: 0;
+    transition: 0.3s ease-in-out;
+    width: 60%;
+      border:2px solid var(--nav-text-n-hover-color);
+      border-radius:10px;
+}
+      .cookie-choices-text, .cookie-choices-buttons a {
+    color: var(--nav-text-n-hover-color) !important;
+      font-family:var(--main-font);
+}   
+      @media (max-width:800px){
+      #container {
+	      width: 100%;
+	      margin-bottom: 105px;
+      	flex-direction:column;
+	      }
+      }
+      #article a.home-link {
+    background: var(--nav-bg-h-color);
+    padding: 20px;
+    color: var(--nav-text-n-hover-color);
+    font-family: 'BeVietnamExtraBold';
+}
